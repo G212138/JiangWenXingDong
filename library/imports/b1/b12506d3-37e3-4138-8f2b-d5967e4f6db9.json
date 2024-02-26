@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "jiashan",
+    "texture": "1290f3b9-5a4f-44bf-a2f0-8efc1a994591",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      83,
+      99
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      83,
+      99
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

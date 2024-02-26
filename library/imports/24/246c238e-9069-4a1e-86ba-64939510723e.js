@@ -27,14 +27,11 @@ var ListenerManager_1 = require("../../../../frame/scripts/Manager/ListenerManag
 var SyncDataManager_1 = require("../../../../frame/scripts/Manager/SyncDataManager");
 var BaseGamePanel_1 = require("../../../../frame/scripts/UI/Panel/BaseGamePanel");
 var EventType_1 = require("../../Data/EventType");
-var EditorManager_1 = require("../../Manager/EditorManager");
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
 var GamePanel = /** @class */ (function (_super) {
     __extends(GamePanel, _super);
     function GamePanel() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.gameLevel = [];
-        return _this;
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     GamePanel.prototype.start = function () {
         _super.prototype.start.call(this);
@@ -60,21 +57,9 @@ var GamePanel = /** @class */ (function (_super) {
      */
     GamePanel.prototype.setPanel = function () {
         _super.prototype.setPanel.call(this);
-        // TODO 业务逻辑        
-        for (var i = 0; i < this.gameLevel.length; i++) {
-            this.gameLevel[i].active = false;
-        }
-        this.gameLevel[EditorManager_1.EditorManager.editorData.gameIndex].active = true;
+        // TODO 业务逻辑 
+        console.log('gameType:', SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.gameType);
         ListenerManager_1.ListenerManager.dispatch(EventType_1.EventType.ENTER_GAME);
-        // if (EditorManager.editorData.gameIndex == 0) {
-        //     this.gameLevel[EditorManager.editorData.gameIndex].getComponent(Level_1).init();
-        // } else if (EditorManager.editorData.gameIndex == 1) {
-        //     this.gameLevel[EditorManager.editorData.gameIndex].getComponent(Level_2).init();
-        // } else if (EditorManager.editorData.gameIndex == 2) {
-        //     this.gameLevel[EditorManager.editorData.gameIndex].getComponent(Level_3).init();
-        // } else if (EditorManager.editorData.gameIndex == 3) {
-        //     this.gameLevel[EditorManager.editorData.gameIndex].getComponent(Level_4).init();
-        // }
     };
     /**
      * 心跳回调（当actionId不相等时才会触发）
@@ -82,12 +67,7 @@ var GamePanel = /** @class */ (function (_super) {
      */
     GamePanel.prototype.onRecoveryData = function (recovery) {
         _super.prototype.onRecoveryData.call(this, recovery);
-        for (var i = 0; i < this.gameLevel.length; i++) {
-            this.gameLevel[i].active = false;
-        }
-        this.gameLevel[EditorManager_1.EditorManager.editorData.gameIndex].active = true;
-        ListenerManager_1.ListenerManager.dispatch(EventType_1.EventType.ENTER_GAME);
-        // ListenerManager.dispatch(EventType.GAME_RECONNECT);
+        ListenerManager_1.ListenerManager.dispatch(EventType_1.EventType.GAME_RECONNECT);
     };
     /**
      * 作答正确
@@ -119,26 +99,12 @@ var GamePanel = /** @class */ (function (_super) {
     GamePanel.prototype.onReplay = function () {
         _super.prototype.onReplay.call(this);
         SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.curLevel = 0;
-        SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.isShowLine = false;
-        SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.isShowLine2 = false;
-        SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.showNumCount = 0;
-        SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.isShowCircle = false;
-        SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.fillAreaOptions = [];
-        SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.fillAreaOptions2 = [];
-        for (var i = 0; i < this.gameLevel.length; i++) {
-            this.gameLevel[i].active = false;
-        }
-        this.gameLevel[EditorManager_1.EditorManager.editorData.gameIndex].active = true;
-        ListenerManager_1.ListenerManager.dispatch(EventType_1.EventType.ENTER_GAME);
-        // ListenerManager.dispatch(EventType.GAME_REPLAY);
+        ListenerManager_1.ListenerManager.dispatch(EventType_1.EventType.GAME_REPLAY);
     };
     GamePanel.prototype.update = function (dt) {
         _super.prototype.update.call(this, dt);
     };
     GamePanel.className = 'GamePanel';
-    __decorate([
-        property(cc.Node)
-    ], GamePanel.prototype, "gameLevel", void 0);
     GamePanel = __decorate([
         ccclass
     ], GamePanel);

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "两端都不种",
+    "texture": "e5764746-5a87-421f-8602-3927876cb7ce",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      265,
+      49
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      265,
+      49
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

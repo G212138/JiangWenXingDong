@@ -19,10 +19,6 @@ export default class TeacherPanel extends BaseTeacherPanel {
     private toggle_replay: cc.ToggleContainer = null;
     @property(cc.ToggleContainer)
     private toggle_titleAudio: cc.ToggleContainer = null;
-    @property(cc.ToggleContainer)
-    private toggle_gameMode: cc.ToggleContainer = null;
-    @property(cc.ToggleContainer)
-    private toggle_gameIndex: cc.ToggleContainer = null;
 
     private _btn_save: cc.Node = null;
     private _btn_view: cc.Node = null;
@@ -50,8 +46,6 @@ export default class TeacherPanel extends BaseTeacherPanel {
         this.toggle_stars.toggleItems[EditorManager.editorData.isStarCount ? 0 : 1].isChecked = true;
         this.toggle_replay.toggleItems[EditorManager.editorData.isReplay ? 0 : 1].isChecked = true;
         this.toggle_titleAudio.toggleItems[EditorManager.editorData.isPlayTitle ? 0 : 1].isChecked = true;
-        this.toggle_gameMode.toggleItems[EditorManager.editorData.gameMode].isChecked = true;
-        this.toggle_gameIndex.toggleItems[EditorManager.editorData.gameIndex].isChecked = true;
     }
 
     // 星级评判开关
@@ -70,16 +64,6 @@ export default class TeacherPanel extends BaseTeacherPanel {
     public onToggleTitleAudio(toggle: cc.Toggle): void {
         let index = this.toggle_titleAudio.toggleItems.indexOf(toggle);
         EditorManager.editorData.isPlayTitle = 0 === index;
-    }
-
-    private onToggleGameMode(toggle: cc.Toggle): void {
-        let index = this.toggle_gameMode.toggleItems.indexOf(toggle);
-        EditorManager.editorData.gameMode = index;
-    }
-
-    private onToggleGameIndex(toggle: cc.Toggle): void {
-        let index = this.toggle_gameIndex.toggleItems.indexOf(toggle);
-        EditorManager.editorData.gameIndex = index;
     }
 
     // 保存课件按钮

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "大盘子",
+    "texture": "e83c9c8c-d467-4691-a739-be361844bafe",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      849,
+      763
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      849,
+      763
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

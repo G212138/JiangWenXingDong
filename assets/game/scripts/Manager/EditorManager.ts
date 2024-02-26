@@ -20,8 +20,6 @@ class EditorData {
     public coursewareLevel: number = 2;
 
     // TODO 自定义数据
-    public gameMode: number = 0; //0:演示游戏 1:下发游戏
-    public gameIndex: number = 0; //游戏索引
 }
 
 class EditorManagerClass {

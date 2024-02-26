@@ -26,8 +26,6 @@ var EditorData = /** @class */ (function () {
         // 课件等级 0：幼小  1：小低  2：小高
         this.coursewareLevel = 2;
         // TODO 自定义数据
-        this.gameMode = 0; //0:演示游戏 1:下发游戏
-        this.gameIndex = 0; //游戏索引
     }
     return EditorData;
 }());

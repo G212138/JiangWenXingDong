@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "土堆",
+    "texture": "50e30d9c-411d-4dcd-b9ea-382283349d42",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      2048,
+      268
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      2048,
+      268
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

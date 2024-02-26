@@ -38,8 +38,6 @@ var TeacherPanel = /** @class */ (function (_super) {
         _this.toggle_stars = null;
         _this.toggle_replay = null;
         _this.toggle_titleAudio = null;
-        _this.toggle_gameMode = null;
-        _this.toggle_gameIndex = null;
         _this._btn_save = null;
         _this._btn_view = null;
         return _this;
@@ -64,8 +62,6 @@ var TeacherPanel = /** @class */ (function (_super) {
         this.toggle_stars.toggleItems[EditorManager_1.EditorManager.editorData.isStarCount ? 0 : 1].isChecked = true;
         this.toggle_replay.toggleItems[EditorManager_1.EditorManager.editorData.isReplay ? 0 : 1].isChecked = true;
         this.toggle_titleAudio.toggleItems[EditorManager_1.EditorManager.editorData.isPlayTitle ? 0 : 1].isChecked = true;
-        this.toggle_gameMode.toggleItems[EditorManager_1.EditorManager.editorData.gameMode].isChecked = true;
-        this.toggle_gameIndex.toggleItems[EditorManager_1.EditorManager.editorData.gameIndex].isChecked = true;
     };
     // 星级评判开关
     TeacherPanel.prototype.onToggleStar = function (toggle) {
@@ -81,14 +77,6 @@ var TeacherPanel = /** @class */ (function (_super) {
     TeacherPanel.prototype.onToggleTitleAudio = function (toggle) {
         var index = this.toggle_titleAudio.toggleItems.indexOf(toggle);
         EditorManager_1.EditorManager.editorData.isPlayTitle = 0 === index;
-    };
-    TeacherPanel.prototype.onToggleGameMode = function (toggle) {
-        var index = this.toggle_gameMode.toggleItems.indexOf(toggle);
-        EditorManager_1.EditorManager.editorData.gameMode = index;
-    };
-    TeacherPanel.prototype.onToggleGameIndex = function (toggle) {
-        var index = this.toggle_gameIndex.toggleItems.indexOf(toggle);
-        EditorManager_1.EditorManager.editorData.gameIndex = index;
     };
     // 保存课件按钮
     TeacherPanel.prototype.onBtnSaveClicked = function () {
@@ -121,12 +109,6 @@ var TeacherPanel = /** @class */ (function (_super) {
     __decorate([
         property(cc.ToggleContainer)
     ], TeacherPanel.prototype, "toggle_titleAudio", void 0);
-    __decorate([
-        property(cc.ToggleContainer)
-    ], TeacherPanel.prototype, "toggle_gameMode", void 0);
-    __decorate([
-        property(cc.ToggleContainer)
-    ], TeacherPanel.prototype, "toggle_gameIndex", void 0);
     TeacherPanel = __decorate([
         ccclass
     ], TeacherPanel);

@@ -13,12 +13,10 @@ var CustomSyncData = /** @class */ (function () {
     function CustomSyncData() {
         this.curLevel = 0; // 当前关卡(第一关为0)
         // TODO 自定义
-        this.isShowLine = false;
-        this.isShowLine2 = false;
-        this.showNumCount = 0;
-        this.isShowCircle = false;
-        this.fillAreaOptions = [];
-        this.fillAreaOptions2 = [];
+        this.gameType = 0; //0: 未选 1：两端都不中 2：一端种一端不种 3：两端都不种 4：环形道路
+        this.curFillResult = [false, false, false, false, false, false, false, false, false, false, false, false, false]; //当前填充结果
+        this.curTableValue = ["", ""];
+        this.curBlockIndex = "";
     }
     return CustomSyncData;
 }());

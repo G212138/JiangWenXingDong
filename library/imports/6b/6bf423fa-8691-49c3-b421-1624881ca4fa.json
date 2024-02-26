@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "石头",
+    "texture": "ed549cab-bb52-432f-ae6f-9e5386ba6435",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      2048,
+      296
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      2048,
+      296
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

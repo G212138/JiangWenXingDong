@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "biaohe",
+    "texture": "761ec13c-4d5e-4e65-9e3b-c7512ab203f8",
+    "atlas": "",
+    "rect": [
+      8,
+      0,
+      324,
+      267
+    ],
+    "offset": [
+      1,
+      0.5
+    ],
+    "originalSize": [
+      338,
+      268
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -2,20 +2,12 @@ import { ListenerManager } from '../../../../frame/scripts/Manager/ListenerManag
 import { SyncData, SyncDataManager } from '../../../../frame/scripts/Manager/SyncDataManager';
 import BaseGamePanel from '../../../../frame/scripts/UI/Panel/BaseGamePanel';
 import { EventType } from '../../Data/EventType';
-import { EditorManager } from '../../Manager/EditorManager';
-import Level_1 from '../Item/Level_1';
-import Level_2 from '../Item/Level_2';
-import Level_3 from '../Item/Level_3';
-import Level_4 from '../Item/Level_4';
 
 const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class GamePanel extends BaseGamePanel {
     public static className = 'GamePanel';
-
-    @property(cc.Node)
-    private gameLevel: cc.Node[] = [];
 
     start() {
         super.start();
@@ -43,21 +35,9 @@ export default class GamePanel extends BaseGamePanel {
      */
     protected setPanel() {
         super.setPanel();
-        // TODO 业务逻辑        
-        for (let i = 0; i < this.gameLevel.length; i++) {
-            this.gameLevel[i].active = false;
-        }
-        this.gameLevel[EditorManager.editorData.gameIndex].active = true;
+        // TODO 业务逻辑 
+        console.log('gameType:', SyncDataManager.getSyncData().customSyncData.gameType);
         ListenerManager.dispatch(EventType.ENTER_GAME);
-        // if (EditorManager.editorData.gameIndex == 0) {
-        //     this.gameLevel[EditorManager.editorData.gameIndex].getComponent(Level_1).init();
-        // } else if (EditorManager.editorData.gameIndex == 1) {
-        //     this.gameLevel[EditorManager.editorData.gameIndex].getComponent(Level_2).init();
-        // } else if (EditorManager.editorData.gameIndex == 2) {
-        //     this.gameLevel[EditorManager.editorData.gameIndex].getComponent(Level_3).init();
-        // } else if (EditorManager.editorData.gameIndex == 3) {
-        //     this.gameLevel[EditorManager.editorData.gameIndex].getComponent(Level_4).init();
-        // }
     }
 
     /**
@@ -66,12 +46,7 @@ export default class GamePanel extends BaseGamePanel {
      */
     protected onRecoveryData(recovery: SyncData): void {
         super.onRecoveryData(recovery);
-        for (let i = 0; i < this.gameLevel.length; i++) {
-            this.gameLevel[i].active = false;
-        }
-        this.gameLevel[EditorManager.editorData.gameIndex].active = true;
-        ListenerManager.dispatch(EventType.ENTER_GAME);
-        // ListenerManager.dispatch(EventType.GAME_RECONNECT);
+        ListenerManager.dispatch(EventType.GAME_RECONNECT);
     }
 
     /**
@@ -106,18 +81,7 @@ export default class GamePanel extends BaseGamePanel {
     protected onReplay() {
         super.onReplay();
         SyncDataManager.getSyncData().customSyncData.curLevel = 0;
-        SyncDataManager.getSyncData().customSyncData.isShowLine = false;
-        SyncDataManager.getSyncData().customSyncData.isShowLine2 = false;
-        SyncDataManager.getSyncData().customSyncData.showNumCount = 0;
-        SyncDataManager.getSyncData().customSyncData.isShowCircle = false;
-        SyncDataManager.getSyncData().customSyncData.fillAreaOptions = [];
-        SyncDataManager.getSyncData().customSyncData.fillAreaOptions2 = [];
-        for (let i = 0; i < this.gameLevel.length; i++) {
-            this.gameLevel[i].active = false;
-        }
-        this.gameLevel[EditorManager.editorData.gameIndex].active = true;
-        ListenerManager.dispatch(EventType.ENTER_GAME);
-        // ListenerManager.dispatch(EventType.GAME_REPLAY);
+        ListenerManager.dispatch(EventType.GAME_REPLAY);
     }
 
     update(dt) {

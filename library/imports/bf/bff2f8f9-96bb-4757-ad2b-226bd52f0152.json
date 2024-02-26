@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "树",
+    "texture": "2fba734f-87c1-450f-86fd-8e33e91e3aa3",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      123,
+      167
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      123,
+      167
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

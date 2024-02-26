@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "小表",
+    "texture": "8e4484a3-d8e6-4c26-b194-b17e2d10d0b0",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      366,
+      282
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      366,
+      282
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

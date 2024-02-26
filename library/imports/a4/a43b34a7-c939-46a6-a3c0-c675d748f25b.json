@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "树坑",
+    "texture": "b8d4806b-d99e-4056-b6de-4b26f5c36c66",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      118,
+      86
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      118,
+      86
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

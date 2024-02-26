@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "请你按照要求种树",
+    "texture": "c2baec1e-bc3f-4b01-b936-45c5bf9350bf",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      589,
+      79
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      589,
+      79
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

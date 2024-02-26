@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "环形道路",
+    "texture": "21cc15f6-90e4-4f41-a19f-d54b296c965f",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      213,
+      47
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      213,
+      47
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

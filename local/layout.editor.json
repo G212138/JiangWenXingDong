@@ -13,13 +13,13 @@
         "type": "dock-h",
         "children": [
           {
-            "width": 412.515625,
-            "height": 924,
+            "width": 413,
+            "height": 921.5,
             "type": "dock-v",
             "children": [
               {
-                "width": 412.515625,
-                "height": 428.9375,
+                "width": 413,
+                "height": 427.765625,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -27,8 +27,8 @@
                 ]
               },
               {
-                "width": 412.515625,
-                "height": 492.046875,
+                "width": 413,
+                "height": 490.71875,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -38,13 +38,13 @@
             ]
           },
           {
-            "width": 990.65625,
-            "height": 924,
+            "width": 989.984375,
+            "height": 921.5,
             "type": "dock-v",
             "children": [
               {
-                "width": 990.65625,
-                "height": 634.046875,
+                "width": 989.984375,
+                "height": 632.5,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -52,8 +52,8 @@
                 ]
               },
               {
-                "width": 990.65625,
-                "height": 286.9375,
+                "width": 989.984375,
+                "height": 286,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -66,8 +66,8 @@
             ]
           },
           {
-            "width": 494.828125,
-            "height": 924,
+            "width": 495,
+            "height": 921.5,
             "type": "panel",
             "active": 0,
             "children": [
@@ -88,7 +88,34 @@
         "inspector",
         "cocos-services"
       ]
-    }
+    },
+    "window-1708953613764": {
+      "main": false,
+      "url": "unpack://static/window.html",
+      "windowType": "dockable",
+      "x": 521,
+      "y": 138,
+      "width": 817,
+      "height": 800,
+      "layout": {
+        "type": "dock-v",
+        "children": [
+          {
+            "width": 801,
+            "height": 761,
+            "type": "panel",
+            "active": 0,
+            "children": [
+              "packaging_tools"
+            ]
+          }
+        ]
+      },
+      "panels": [
+        "packaging_tools"
+      ]
+    },
+    "worker": {}
   },
   "panels": {
     "packaging_tools": {
